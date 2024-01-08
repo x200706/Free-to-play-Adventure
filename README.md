@@ -18,7 +18,7 @@
 ![image](https://github.com/x200706/Free-to-play-Adventure/assets/99391710/94674fe6-9eae-4595-8a7d-6e9ab4289649)
 
 ### 甲骨文免費方案
-內含DB
+內含DB及效能不差的免費ARM主機，但驗證刷卡好難過，20230108又試了一次還是不行
 
 ### GCP VM自架DB
 GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，但這部分倒是有點眉角，我們看看Bing的說明（喂）
@@ -45,3 +45,8 @@ https://www.reddit.com/r/googlecloud/comments/jocln7/is_google_compute_engine_fr
 ## 後端類
 
 （未完待續）
+
+***
+## 網路組
+### 免費域名
+- <https://nic.eu.org/>

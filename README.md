@@ -19,7 +19,7 @@
 ![image](https://github.com/x200706/Free-to-play-Adventure/assets/99391710/94674fe6-9eae-4595-8a7d-6e9ab4289649)
 
 ### 甲骨文免費方案
-內含DB及效能不差的免費ARM主機，但驗證刷卡好難過，20230108又試了一次還是不行
+內含DB及效能不差的免費ARM主機，但驗證刷卡好難過，20230108用新卡號又試了一次還是不行;w;
 
 ### GCP VM自架DB
 GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，但這部分倒是有點眉角，我們看看Bing的說明（喂）
@@ -33,17 +33,12 @@ GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，
 >
 >請注意，如果你超出了免費層級的限制，或者你的免費試用期結束後，你將需要支付相應的費用。希望這個信息對你有所幫助！
 
-20240108逛紅迪：
-```
-https://www.reddit.com/r/googlecloud/comments/jocln7/is_google_compute_engine_free_tier_really_free/
-再看一次GCP 免費VM的討論串釐清他們免費的定義（？）
-不過不知道是不是一超過就開始計價（試用期就是扣300額度）
-
-他不能設置個警示之類的經過同意再開始扣款嗎 萬一因為意外（例如DDOS之類的）超過用量不是很 :aqua_cry:
-```
+- [Reddit的相關討論](https://www.reddit.com/r/googlecloud/comments/jocln7/is_google_compute_engine_free_tier_really_free/)
+- 其他逛Reddit V2EX討論連結沒放，但這邊有看下來的心得~~懶人包~~：
+  - GCP每月1GB網路流量某些情境不太夠
 
 ***
-## 後端類
+## 全／後端類
 
 （未完待續）
 
@@ -51,3 +46,12 @@ https://www.reddit.com/r/googlecloud/comments/jocln7/is_google_compute_engine_fr
 ## 網路組
 ### 免費域名
 - <https://nic.eu.org/>
+（未完待續）
+
+### 免費DNS託管
+（未完待續）
+
+### 免費憑證
+Let's Encrypt+主機跑排程自動展延
+
+妹問題！

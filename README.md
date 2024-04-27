@@ -46,8 +46,9 @@ GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，
 - [Render](https://render.com/)
 - [Vercel](https://vercel.com/)
 
-- [紅迪上大家的投票（關於如何託管Laravel）](https://www.reddit.com/r/laravel/comments/xyphv9/how_do_you_host_laravel_app/)
-
+- 延伸閱讀：[紅迪上大家的投票（關於如何託管Laravel）](https://www.reddit.com/r/laravel/comments/xyphv9/how_do_you_host_laravel_app/)
+  - 這篇有人AWS帳單好高rrr
+  - 話說如果用GCP架設的話，防火牆規則之類可能要了解下（預設VM那邊只能開80跟443）......
 
 ***
 ## 網路組

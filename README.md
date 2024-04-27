@@ -14,7 +14,7 @@
 ***
 ## 資料庫篇
 ### Supabase
-最大的缺點就是沒連接一週會睡著，要上後台叫醒
+沒連接一週會睡著，要上後台叫醒，其他很讚了
 
 ![image](https://github.com/x200706/Free-to-play-Adventure/assets/99391710/94674fe6-9eae-4595-8a7d-6e9ab4289649)
 

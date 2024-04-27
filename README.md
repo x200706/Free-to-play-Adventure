@@ -45,6 +45,7 @@ GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，
 去紅迪看看大家推薦近年來免費部署Laravel最佳方式，大概有這些服務（這些也可以部署Node.js甚至有的可以部署docker），其實都紅一陣子了~~
 - [Render](https://render.com/)<-這個[部後端要錢？！](https://ithelp.ithome.com.tw/articles/10255630)
 - [Vercel](https://vercel.com/)
+  - [這文章很讚呢](https://dev.to/kenean50/free-serverless-laravel-deployment-1e9n)
 
 - 延伸閱讀：[紅迪上大家的投票（關於如何託管Laravel）](https://www.reddit.com/r/laravel/comments/xyphv9/how_do_you_host_laravel_app/)
   - 這篇有人AWS帳單好高rrr

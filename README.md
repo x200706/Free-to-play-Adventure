@@ -47,7 +47,7 @@ GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，
 - [Vercel](https://vercel.com/)
   - [這文章很讚呢](https://dev.to/kenean50/free-serverless-laravel-deployment-1e9n)
   - [這影片有施行細節，剛好解答文章留言區有人的疑惑](https://www.youtube.com/watch?v=dERa0R2zLqc&t=1s)
-  - 遇到
+  - 遇到以下問題可參考[這篇](https://stackoverflow.com/questions/78242231/error-while-deploying-laravel-app-on-vercel-project)
     >php: error while loading shared libraries: libssl.so.10: cannot open shared object file: No such file or directory
 
 - 延伸閱讀：[紅迪上大家的投票（關於如何託管Laravel）](https://www.reddit.com/r/laravel/comments/xyphv9/how_do_you_host_laravel_app/)

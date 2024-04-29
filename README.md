@@ -56,6 +56,20 @@ GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，
   - 靜態資產一直404可參考[這個庫](https://github.com/jamiedavenport/laravel-vercel-example/blob/main/vercel.json)描vercel.json，build換成你要描的路徑；另外可能要留意允許HTTPS的問題
     - 官方討論區那個最佳解我看著它描不出來..
     - 這幾個庫描法也可以參考 [1](https://github.com/treckstar/vercel-laravel-10-starter) [2](https://github.com/guoxiangke/laravel-vercel)<-有些其他方面的說明也不錯
+    - 描太粗
+      ```js
+          "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/public/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+      ],
+      ```
+      打開網站會變成下載==...
   - [這個Repository](https://github.com/aungmyatmoethegreat/laravel-on-vercel) 沒描靜態資產，但如果有遇到API路徑問題，或許可以參考？
     - 我自己在`route/web`寫了一個`/hihi`的get router測試倒是不受影響，`route/api`就真的很尷尬-.-
 

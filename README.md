@@ -50,6 +50,7 @@ GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，
     - [影片版－用CLI](https://www.youtube.com/watch?v=dERa0R2zLqc&t=1s)
   - 遇到以下問題
     >php: error while loading shared libraries: libssl.so.10: cannot open shared object file: No such file or directory
+
     可參考[這篇](https://stackoverflow.com/questions/78242231/error-while-deploying-laravel-app-on-vercel-project)
     版本指定問題～
   - 靜態資產一直404可參考[這個庫](https://github.com/jamiedavenport/laravel-vercel-example/blob/main/vercel.json)描vercel.json，build換成你要描的路徑；另外可能要留意允許HTTPS的問題

@@ -45,11 +45,16 @@ GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，
 去紅迪看看大家推薦近年來免費部署Laravel最佳方式，大概有這些服務（這些也可以部署Node.js甚至有的可以部署docker），其實都紅一陣子了~~
 - [Render](https://render.com/)<-這個[部後端要錢？！](https://ithelp.ithome.com.tw/articles/10255630)
 - [Vercel](https://vercel.com/)
-  - [這文章很讚呢](https://dev.to/kenean50/free-serverless-laravel-deployment-1e9n)
-  - [這影片有施行細節，剛好解答文章留言區有人的疑惑](https://www.youtube.com/watch?v=dERa0R2zLqc&t=1s)
-  - 遇到以下問題可參考[這篇](https://stackoverflow.com/questions/78242231/error-while-deploying-laravel-app-on-vercel-project)
+  - [這文章適合"入門"](https://dev.to/kenean50/free-serverless-laravel-deployment-1e9n)
+    - 但牽涉到描靜態資產就..
+    - [影片版－用CLI](https://www.youtube.com/watch?v=dERa0R2zLqc&t=1s)
+  - 遇到以下問題
     >php: error while loading shared libraries: libssl.so.10: cannot open shared object file: No such file or directory
-  - 找不到靜態文件可參考[這篇](https://github.com/orgs/vercel/discussions/1296)
+    可參考[這篇](https://stackoverflow.com/questions/78242231/error-while-deploying-laravel-app-on-vercel-project)
+    版本指定問題～
+  - 靜態資產一直404可參考[這個庫](https://github.com/jamiedavenport/laravel-vercel-example/blob/main/vercel.json)描vercel.json，build換成你要描的路徑；另外可能要留意允許HTTPS的問題
+    - 官方討論區那個最佳解我看著它描不出來..
+    - 這幾個庫描法也可以參考 [1](https://github.com/aungmyatmoethegreat/laravel-on-vercel) [2](https://github.com/treckstar/vercel-laravel-10-starter) [3](https://github.com/guoxiangke/laravel-vercel)<-有些其他方面的說明也不錯
 
 - 延伸閱讀：[紅迪上大家的投票（關於如何託管Laravel）](https://www.reddit.com/r/laravel/comments/xyphv9/how_do_you_host_laravel_app/)
   - 這篇有人AWS帳單好高rrr

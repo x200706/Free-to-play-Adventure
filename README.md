@@ -72,7 +72,7 @@ GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，
       打開網站會變成下載==...
   - [這個Repository](https://github.com/aungmyatmoethegreat/laravel-on-vercel) 沒描靜態資產，但如果有遇到API路徑問題，或許可以參考？
     - 我自己在`route/web`寫了一個`/hihi`的get router測試倒是不受影響，`route/api`就真的很尷尬-.-
-## 剩餘的常識更新在blog[這篇](https://x200706.bearblog.dev/vercellaravel-admin/)
+## 剩餘的嘗試更新在blog[這篇](https://x200706.bearblog.dev/vercellaravel-admin/)
 
 - 延伸閱讀：[紅迪上大家的投票（關於如何託管Laravel）](https://www.reddit.com/r/laravel/comments/xyphv9/how_do_you_host_laravel_app/)
   - 這篇有人AWS帳單好高rrr

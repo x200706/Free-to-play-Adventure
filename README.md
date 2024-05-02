@@ -9,8 +9,12 @@
 
 ***
 ## 前端類
-- Netlify：以前拿來價過Hexo，有每個月部署限額次數，但老實說個人使用好像就蠻...堪用的...？（可能有些人網站做很大流量特別高啊><||）
-
+### Netlify
+以前拿來架過Hexo，有每個月部署限額次數，但老實說個人使用好像就蠻...堪用的...？（可能有些人網站做很大流量特別高啊><||）
+### Vercel
+下方後端有用到會詳細說明
+### [Render](https://render.com/)
+後端要錢，Docker上去發現是後端也一樣[要錢](https://ithelp.ithome.com.tw/articles/10255630)
 ***
 ## 資料庫
 ### Supabase
@@ -38,60 +42,38 @@ GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，
   - GCP每月1GB網路流量某些情境不太夠
 ***
 ## 檔案儲存類
-及功能類似S3的產品
-- 上方的Supabase也有個產品叫Storage->20240502更新：Larvel Driver稀少，要10含以上才有開源Driver能用；雖然Supabase官方說跟S3相容，但用flysystem S3 driver一直遇到路徑錯誤（例如他把我endpoint後方有個`v1/s3/storage`重複兩次變成`v1/s3/storage/v1/s3/storage`）導致各種異常（像是找不到桶子）的問題
-- 後來逛紅迪網，有網友推薦[Cloudinary](https://cloudinary.com/)，可以做為S3的替代品（雖然不是S3相容），查網路資料，原來之前Heroku還是免費但不好儲存資料時，就很多人使用它作為雲端儲存的方案了
-  - 我把Laravel接通的過程放在[這邊](https://x200706.bearblog.dev/serverless-laravelcloudinary)
+一些功能類似S3的產品
+### Supabase Storage
+上方的Supabase也有個產品叫Storage->20240502更新：Larvel Driver稀少，要10含以上才有開源Driver能用；雖然Supabase官方說跟S3相容，但用flysystem S3 driver一直遇到路徑錯誤（例如他把我endpoint後方有個`v1/s3/storage`重複兩次變成`v1/s3/storage/v1/s3/storage`）導致各種異常（像是找不到桶子）的問題
+### Cloudinary
+後來逛紅迪網，有網友推薦[Cloudinary](https://cloudinary.com/)，可以做為S3的替代品（雖然不是S3相容），查網路資料，原來之前Heroku還是免費但不好儲存資料時，就很多人使用它作為雲端儲存的方案了
+
+我把Laravel接通的過程放在[這邊](https://x200706.bearblog.dev/serverless-laravelcloudinary)
 
 ***
 ## 全／後端類
-### Laravel雲端PaSS以外的可能性？
-20240427在Profreehost[折騰一番](https://x200706.bearblog.dev/composer-install/)後發現日後困難可能更多，實在不是一個很有效率的方式
+### GCP永久免費主機
+但網路流量超過要錢rr（延伸閱讀：[紅迪上大家的投票（關於如何託管Laravel）](https://www.reddit.com/r/laravel/comments/xyphv9/how_do_you_host_laravel_app/)，這篇有人AWS帳單好高rrr，雲端真心貴）
 
-去紅迪看看大家推薦近年來免費部署Laravel最佳方式，大概有這些服務（這些也可以部署Node.js甚至有的可以部署docker），其實都紅一陣子了~~
-- [Render](https://render.com/)<-這個[部後端要錢？！](https://ithelp.ithome.com.tw/articles/10255630)
-- [Vercel](https://vercel.com/)
-  - [這文章適合"入門"](https://dev.to/kenean50/free-serverless-laravel-deployment-1e9n)
-    - 但牽涉到描靜態資產就..
-    - [影片版－用CLI](https://www.youtube.com/watch?v=dERa0R2zLqc&t=1s)
-  - 遇到以下問題
-    >php: error while loading shared libraries: libssl.so.10: cannot open shared object file: No such file or directory
+話說如果用GCP架設的話，不能只懂Compute Engine，防火牆規則之類可能要了解下，預設VM那邊只能開80跟443－但設置後會不會觸發計費得詳讀條款！！
 
-    可參考[這篇](https://stackoverflow.com/questions/78242231/error-while-deploying-laravel-app-on-vercel-project)
-    版本指定問題～
-  - 靜態資產一直404可參考[這個庫](https://github.com/jamiedavenport/laravel-vercel-example/blob/main/vercel.json)描vercel.json，build換成你要描的路徑；另外可能要留意允許HTTPS的問題
-    - 官方討論區那個最佳解我看著它描不出來..
-    - 這幾個庫描法也可以參考 [1](https://github.com/treckstar/vercel-laravel-10-starter) [2](https://github.com/guoxiangke/laravel-vercel)<-有些其他方面的說明也不錯
-    - 描太粗
-      ```js
-          "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/public/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
-        }
-      ],
-      ```
-      打開網站會變成下載==...
-  - [這個Repository](https://github.com/aungmyatmoethegreat/laravel-on-vercel) 沒描靜態資產，但如果有遇到API路徑問題，或許可以參考？
-    - 我自己在`route/web`寫了一個`/hihi`的get router測試倒是不受影響，`route/api`就真的很尷尬-.-
-## 剩餘的嘗試更新在blog[這篇](https://x200706.bearblog.dev/vercellaravel-admin/)
+### [Vercel](https://vercel.com/)
+20240427在幫Laravel找尋雲端PaSS以外的可能性，先是在Profreehost[折騰一番](https://x200706.bearblog.dev/composer-install/)後，發現這種傳統免空日後困難可能更多，實在不是一個很有效率的方式
 
-- 延伸閱讀：[紅迪上大家的投票（關於如何託管Laravel）](https://www.reddit.com/r/laravel/comments/xyphv9/how_do_you_host_laravel_app/)
-  - 這篇有人AWS帳單好高rrr
-  - 話說如果用GCP架設的話，防火牆規則之類可能要了解下（預設VM那邊只能開80跟443）......
+去紅迪看看大家推薦近年來免費部署Laravel最佳方式，找到這個（其實之前聽過，但當時以為很複雜一直沒學><||）
+
+我的Laravel嘗試，原本寫在這裡，但因為篇幅越來越長+後續只更新在部落格[那篇](https://x200706.bearblog.dev/vercellaravel-admin/)，這邊就把舊有內容移除了
 
 ***
 ## 網路組
 ### 免費域名
+#### eu.org
 - <https://nic.eu.org/>
 
 ### 免費DNS託管
 （待撰）
 
 ### 免費憑證
-- Let's Encrypt+主機跑排程自動展延
 - 上方服務商有的會自行提供
+#### Let's Encrypt
+- Let's Encrypt+主機跑排程自動展延

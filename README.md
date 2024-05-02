@@ -12,13 +12,11 @@
 - Netlify：以前拿來價過Hexo，有每個月部署限額次數，但老實說個人使用好像就蠻...堪用的...？（可能有些人網站做很大流量特別高啊><||）
 
 ***
-## 資料庫&檔案儲存篇
+## 資料庫
 ### Supabase
 DB：沒連接一週會睡著，要上後台叫醒，其他很讚了
 
 ![image](https://github.com/x200706/Free-to-play-Adventure/assets/99391710/94674fe6-9eae-4595-8a7d-6e9ab4289649)
-
-還有個storage 似乎可以做為S3的替代品？！
 
 ### 甲骨文免費方案
 內含DB及效能不差的免費ARM主機，但驗證刷卡好難過，20230108用新卡號又試了一次還是不行;w;
@@ -38,6 +36,12 @@ GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，
 - [Reddit的相關討論](https://www.reddit.com/r/googlecloud/comments/jocln7/is_google_compute_engine_free_tier_really_free/)
 - 其他逛Reddit V2EX討論連結沒放，但這邊有看下來的心得~~懶人包~~：
   - GCP每月1GB網路流量某些情境不太夠
+***
+## 檔案儲存類
+及功能類似S3的產品
+- 上方的Supabase也有個產品叫Storage->20240502更新：Larvel Driver稀少，要10含以上才有開源Driver能用；雖然Supabase官方說跟S3相容，但用flysystem S3 driver一直遇到路徑錯誤（例如他把我endpoint後方有個`v1/s3/storage`重複兩次變成`v1/s3/storage/v1/s3/storage`）導致各種異常（像是找不到桶子）的問題
+- 後來逛紅迪網，有網友推薦[Cloudinary](https://cloudinary.com/)，可以做為S3的替代品（雖然不是S3相容），查網路資料，原來之前Heroku還是免費但不好儲存資料時，就很多人使用它作為雲端儲存的方案了
+  - 我把Laravel接通的過程放在[這邊](https://x200706.bearblog.dev/serverless-laravelcloudinary)
 
 ***
 ## 全／後端類

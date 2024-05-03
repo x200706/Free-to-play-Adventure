@@ -40,6 +40,11 @@ GCP內建的資料庫功能是要錢的，VM某些情境下有永久免費的，
 - [Reddit的相關討論](https://www.reddit.com/r/googlecloud/comments/jocln7/is_google_compute_engine_free_tier_really_free/)
 - 其他逛Reddit V2EX討論連結沒放，但這邊有看下來的心得~~懶人包~~：
   - GCP每月1GB網路流量某些情境不太夠
+ 
+***
+## MQ類
+### [CloudAMQP的開源小狐猴方案](https://www.cloudamqp.com/plans.html#rmq)
+
 ***
 ## 檔案儲存類
 一些功能類似S3的產品
